@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-demo
+  namespace: default
+  labels:
+    app: my-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-demo
+  template:
+    metadata:
+      labels:
+        app: my-demo
+    spec:
+      containers:
+        - name: hard
+          image: nginx:1.20
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 200m
+              memory: 256Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+      volumes:
+            - name: certs
+              secret:
+                secretName: domain-cert
