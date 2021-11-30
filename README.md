@@ -13,10 +13,13 @@ kubectl create secret tls domain-cert --cert=certs/cert.crt --key=certs/cert.key
 
 ![dep](https://user-images.githubusercontent.com/78191008/143670725-31de4677-8ba5-43b9-add9-7a425eefaac4.png)
 
-Подключение секрета в виде тома   
+Подключение секрета в виде тома, под secret-test [mypod.yml](https://github.com/Kostromin-Mixa/minikube-secrets/blob/main/mypod.yml)  
+![sec_po](https://user-images.githubusercontent.com/78191008/144036366-0e0d5a01-d507-419a-ba29-bb47c0250170.png)
+![sec_mo_test](https://user-images.githubusercontent.com/78191008/144036428-f136cfc6-e3db-4aff-8f74-9c67418893c5.png)
+
+Подключение секрета в виде переменных окружения, под secret-env-pod [value.yml](https://github.com/Kostromin-Mixa/minikube-secrets/blob/main/value.yml)  
+
+![sec_po_test](https://user-images.githubusercontent.com/78191008/144036579-5f741a66-9067-422e-aaa8-820a11faabb1.png)
 
 
-Подключение секрета в виде переменных окружения   
 
-
-kubectl exec secret-env-pod -it -- /bin/sh
