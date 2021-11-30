@@ -13,6 +13,9 @@ kubectl create secret tls domain-cert --cert=certs/cert.crt --key=certs/cert.key
 
 ![dep](https://user-images.githubusercontent.com/78191008/143670725-31de4677-8ba5-43b9-add9-7a425eefaac4.png)
 
+Создан секрет в формате кодировки base64, mysecret type Opaque [secrets.yml](https://github.com/Kostromin-Mixa/minikube-secrets/blob/main/secrets.yaml)   
+![secr](https://user-images.githubusercontent.com/78191008/144037933-c50264c8-98ab-4c91-86c5-3d1d95120b57.png)
+
 Подключение секрета в виде тома, под secret-test [mypod.yml](https://github.com/Kostromin-Mixa/minikube-secrets/blob/main/mypod.yml)  
 ![sec_po](https://user-images.githubusercontent.com/78191008/144036366-0e0d5a01-d507-419a-ba29-bb47c0250170.png)
 ![sec_mo_test](https://user-images.githubusercontent.com/78191008/144036428-f136cfc6-e3db-4aff-8f74-9c67418893c5.png)
