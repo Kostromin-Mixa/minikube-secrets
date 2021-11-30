@@ -13,6 +13,10 @@ kubectl create secret tls domain-cert --cert=certs/cert.crt --key=certs/cert.key
 
 ![dep](https://user-images.githubusercontent.com/78191008/143670725-31de4677-8ba5-43b9-add9-7a425eefaac4.png)
 
+Подключение секрета в виде тома   
+
+
+Подключение секрета в виде переменных окружения   
 
 
 kubectl exec secret-env-pod -it -- /bin/sh
